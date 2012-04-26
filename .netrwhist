@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/frank/Documents/Development/python_playground/web_scraper'
+let g:netrw_dirhist_2='/home/frank/Development/fah_common/src/fah_utility'
+let g:netrw_dirhist_3='/mnt/nethome/users/frank/.subversion'
+let g:netrw_dirhist_4='/workspace/Nuke/Nuke7.0dev_git/Core/System'
+let g:netrw_dirhist_5='/workspace/Nuke/Nuke7.0dev_git/Core/System/src'
+let g:netrw_dirhist_6='/workspace/Nuke/Nuke_trunk/Core/Build/include/Build'
+let g:netrw_dirhist_7='/workspace/Nuke/Nuke7.0dev_git/Apps/Nuke/Plugins/NukeX/objects/linux-64-x86-instrument-410'
+let g:netrw_dirhist_8='/mnt/nethome/users/frank'
+let g:netrw_dirhist_9='/workspace/Nuke/Nuke7.0dev_git/Apps/Nuke/NukeScripts/src'
