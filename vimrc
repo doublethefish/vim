@@ -111,3 +111,8 @@ syntax on
 au! BufRead,BufNewFile *.otl            setfiletype vo_base
 """"""""""""""""""""""""""""
 au! BufNewFile,BufRead *.as setlocal ft=javascript
+
+""""""""""""""""""""""
+" Py-mode config
+let g:pymode_folding = 0
+""""""""""""""""""""
