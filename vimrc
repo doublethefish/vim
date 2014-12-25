@@ -115,6 +115,11 @@ au! BufRead,BufNewFile *.otl            setfiletype vo_base
 """"""""""""""""""""""""""""
 au! BufNewFile,BufRead *.as setlocal ft=javascript
 
+""""""""""""""""""""""""""""
+" show tabs
+set list
+set listchars=tab:→\ 
+
 """"""""""""""""""""""
 " Py-mode config
 let g:pymode_folding = 0
