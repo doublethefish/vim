@@ -13,7 +13,7 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set sw=2
-set expandtab
+set noexpandtab
 "set nowrap ignorecase showmatch
 set ignorecase smartcase
 set nowrap showmatch
