@@ -1,7 +1,10 @@
 call pathogen#runtime_append_all_bundles()
+filetype on
+filetype off
+syntax on
+filetype plugin indent on
 call pathogen#helptags()
 
-syntax on
 colorscheme slate "darkblue "Darkcarvedwood_cust
 " Dark
 set ruler
@@ -115,4 +118,6 @@ au! BufNewFile,BufRead *.as setlocal ft=javascript
 """"""""""""""""""""""
 " Py-mode config
 let g:pymode_folding = 0
-""""""""""""""""""""
+let g:pymode_indent = 0
+""""""""""""""""""""""""""""
+
