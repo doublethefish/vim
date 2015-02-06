@@ -7,26 +7,32 @@ call pathogen#helptags()
 
 colorscheme slate "darkblue "Darkcarvedwood_cust
 " Dark
-set ruler
-set cindent
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set sw=2
-set noexpandtab
-"set nowrap ignorecase showmatch
-set ignorecase smartcase
-set nowrap showmatch
-"set ai
-set guioptions+=a          " highlight text copies that text to the clip board
-set wildmenu
-set bs=2
-set vb
-set incsearch              " show matches as you type
-set hlsearch
-set guifont=Andale\ Mono\ 11
+set ruler                      " Show the line and column number of the cursor position
+set cindent                    " Enables automatic C program indenting
+set tabstop=2                  " Number of spaces that a <Tab> in the file counts for
+set softtabstop=2              " Number of spaces that a <Tab> counts for while performing editing operations, like inserting a <Tab> or using <BS>.
+set shiftwidth=2               " Number of spaces to use for each step of (auto)indent
+set noexpandtab                " Use tabs not spaces
+set ignorecase                 " Ignore case in search patterns
+set smartcase                  " Override the 'ignorecase' option if the search pattern contains upper case characters
+set nowrap                     " Don't wrap at the end of the window buffer
+"set showmatch                  " When a bracket is inserted, briefly jump to the matching one.
+set autoindent                 " Copy indent from current line when starting a new line
+set guioptions+=a              " highlighting text copies that text to the clip board
+set wildmenu                   " possible matches are shown just above the command line
+set backspace=indent,eol,start " allow backspace to work over elements named
+set visualbell                 " Use visual bell instead of beeping
+set incsearch                  " show matches as you type
+set hlsearch                   " highlight all matches after typing
+set guifont=Andale\ Mono\ 11   " a list of fonts which will be used for the GUI version of Vim
 "set guifont=gohufont-14
-set nu
+set number                     " precede each line with its line number
+
+"-------------------
+" This will look in the current directory for "tags", and work up the 
+" tree towards root until one is found. 
+" IOW, you can be anywhere in your source tree instead of just the 
+" root of it.
 set tags=tags;/
 
 "taglist setup
