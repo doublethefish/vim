@@ -48,43 +48,43 @@ map :Q :q
 " function that toggles between editing the source and header file for a file pair
 " bound to alt-tab by default
 function EAlt()
-       let curext=expand("%:e")
-       let base=expand("%:r")
-       let altfile=""
+	let curext=expand("%:e")
+	let base=expand("%:r")
+	let altfile=""
 	let ffile=""
-       if (curext=="h")
-               " try looking for a .c or .cpp file
-               if (filereadable(base.".c"))
-                       let altfile = base.".c"
-               elseif (filereadable(base.".cpp"))
-                       let altfile = base.".cpp"
+	if (curext=="h")
+		" try looking for a .c or .cpp file
+		if (filereadable(base.".c"))
+			let altfile = base.".c"
+		elseif (filereadable(base.".cpp"))
+			let altfile = base.".cpp"
 		else
 			" special case, if in the engine include dir then look for a c file in the non include dir
 			let altfile = substitute(base,"include/engine","Source","")
 			echo altfile
 			if (filereadable(altfile.".c"))
-			    let altfile = altfile.".c"
+				let altfile = altfile.".c"
 			elseif (filereadable(altfile.".cpp"))
-			    let altfile = altfile.".cpp"
+				let altfile = altfile.".cpp"
 			else
-			    let altfile = ""
-			    let ffile = expand("%:t:r").".cpp"
+				let altfile = ""
+				let ffile = expand("%:t:r").".cpp"
 			endif
-               endif
-       elseif (curext=="cpp"|| curext=="c")
-               if (filereadable(base.".h"))
-                       let altfile = base.".h"
+		endif
+	elseif (curext=="cpp"|| curext=="c")
+		if (filereadable(base.".h"))
+			let altfile = base.".h"
 		else
 			let ffile = expand("%:t:r").".h"
-               endif
-       endif
-       if (altfile!="")
-               exe ":edit " altfile
-       elseif (ffile!="")
+		endif
+	endif
+	if (altfile!="")
+		exe ":edit " altfile
+	elseif (ffile!="")
 		exe ":find " ffile
 	else
-               echo "No alt file found"
-       endif
+		echo "No alt file found"
+	endif
 endfunction
 " mapping M-I should be alt-tab, but it doesn't seem to work. Mapping C-I (cntl-tab) seems to make both control and alt tab work??
 map <M-`>      :call EAlt()<CR>
