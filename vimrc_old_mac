@@ -162,8 +162,8 @@ au! BufNewFile,BufRead SConscript setlocal ft=python
 
 "-------------------
 " show cursor pos
-au WinLeave * set nocursorline nocursorcolumn
-au WinEnter * set cursorline cursorcolumn
+set nocursorline nocursorcolumn
+set cursorline cursorcolumn
 
 "-------------------
 " show tabs
