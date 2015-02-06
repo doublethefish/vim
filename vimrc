@@ -18,11 +18,11 @@ set noexpandtab
 set ignorecase smartcase
 set nowrap showmatch
 "set ai
-set guioptions+=a          " mark -> copy
+set guioptions+=a          " highlight text copies that text to the clip board
 set wildmenu
 set bs=2
 set vb
-set incsearch
+set incsearch              " show matches as you type
 set hlsearch
 set guifont=Andale\ Mono\ 11
 "set guifont=gohufont-14
@@ -97,6 +97,7 @@ map <M-`>      :call EAlt()<CR>
 "let generate_tags=1
 "source $HOME/vim/ctags.vim
 
+"-------------------
 " fix up the tag function to show the full list instead of the first match
 map <C-]> :tjump <C-R>=expand("<cword>")<CR><CR>
 
@@ -113,6 +114,10 @@ runtime! ftdetect/*.vim
 syntax on
 au! BufRead,BufNewFile *.otl            setfiletype vo_base
 """"""""""""""""""""""""""""
+
+"-------------------
+" Syntax mapping for :
+" Actionscript files
 au! BufNewFile,BufRead *.as setlocal ft=javascript
 
 """"""""""""""""""""""""""""
