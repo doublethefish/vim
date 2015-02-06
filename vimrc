@@ -119,6 +119,10 @@ au! BufRead,BufNewFile *.otl            setfiletype vo_base
 " Syntax mapping for :
 " Actionscript files
 au! BufNewFile,BufRead *.as setlocal ft=javascript
+" shader files
+au! BufNewFile,BufRead *.shader setlocal ft=c
+" SConscripts with .py extensions
+au! BufNewFile,BufRead SConscript setlocal ft=python
 
 """"""""""""""""""""""""""""
 " show tabs
