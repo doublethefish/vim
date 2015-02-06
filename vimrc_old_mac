@@ -1,0 +1,181 @@
+"call pathogen#runtime_append_all_bundles()
+filetype on
+filetype off
+syntax on
+filetype plugin indent on
+"call pathogen#helptags()
+
+"set guifont=Andale\ Mono\ 11
+"colorscheme darkblue
+"colorscheme macvim
+:colorscheme no_quarter
+set ruler
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set cindent
+set cino=>2
+set ignorecase
+set smartcase
+set nowrap
+set showmatch
+"set guioptions+=a          " highlight text copies that text to the clip board
+set wildmenu
+set incsearch " show matches as you type
+set hlsearch
+
+set number
+set noexpandtab
+"set autoindent
+set backspace=indent,eol,start " allow back space to work over auto inden, eol and start of insert
+"set transparency=5
+set visualbell " use a visual bell instead of beeping
+
+" allow swapping in and out of buffers
+set hidden
+
+"folding settings
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
+
+"-----------------
+" Custom key bindings
+
+" search for file in buffers
+map <S-o><S-o> <esc>:b 
+
+" search for structure in ctags
+map <S-s><S-s> <esc>:tag /
+
+"§ - switch between header and source
+" requires a plugin..
+map § <esc>:A<CR>  
+map ` <esc>:A<CR>  
+
+"alias '"' in mac vim escape mode to tag to. (useful in mac)
+nmap ' #
+
+" go in/out (up/down) cursor history in a similar way to visual-assit
+map <C--> <C-o>
+map <C-+> <C-i>
+
+" enable matchit plugin
+" back and forth in brace blocks
+:source ~/.vim/plugin/matchit.vim
+
+" Get the current file and put it into the buffer
+" needs a plugin
+if has('win32')
+  nmap ,cs :let @"=substitute(expand("%"), "/", "\\", "g")<CR>
+  nmap ,cl :let @"=substitute(expand("%:p"), "/", "\\", "g")<CR>
+
+  " This will copy the path in 8.3 short format, for DOS and Windows 9x
+  nmap ,c8 :let @"=substitute(expand("%:p:8"), "/", "\\", "g")<CR>
+else
+  nmap ,cs :let @"=expand("%:t")<CR>
+  nmap ,cl :let @"=expand("%:p")<CR>
+endif
+
+"set python_highlight_builtin_objs 1
+"set python_highlight_builtin_funcs 1
+
+
+"-----------------
+"minibuffer options
+"let g:miniBufExplMapWindowNavVim = 1
+"let g:miniBufExplMapWindowNavArrows = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplModSelTarget = 1
+
+"-----------------
+"auto complete
+" use <C-n> or <C-p>
+filetype plugin on
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+:set completeopt=longest,menuone
+
+"---------------
+" Set Q, Qa to be qa q
+:command Q q
+:command Qa qa
+:command QA qa
+:command W w
+:command Wa wa
+:command WA wa
+
+"-------------------
+" Past the clipboard text
+map <C-p> "0p
+map <C-P> "0P
+
+"-------------------
+" Naviagate Tabs
+map <C-Left> :tabp<CR>
+map <C-Right> :tabn<CR>
+map <D-Left> :tabp<CR>
+map <D-Right> :tabn<CR>
+
+"---------------
+" Scrolloff, keep cursor X number of line from edge of window whne not at
+" start or end of file
+:set scrolloff=4
+
+"------------------
+" wildignore - Ignore certain filetypes
+set wildignore=*.o,*.class,*.pyc,*.pyo,*.swp
+
+"------------------
+" undo - set up persistent undo
+"set undofile
+"set undodir=~/.undo
+
+"------------------
+" nolazyredraw - divert power to the redraw engines!
+set nolazyredraw
+
+"-------------------
+" show whether in insert, visual or edit mode
+set showmode
+
+"-------------------
+" hide the mouse cursor when typing
+set mousehide
+
+"-------------------
+" Autocompletion
+"imap <C-Space> <C-X><C-O>
+
+"-------------------
+" fix up the tag function to show the full list instead of the first match
+map <C-]> :tjump <C-R>=expand("<cword>")<CR><CR>
+
+"-------------------
+" Syntax mapping for :
+" Actionscript files
+au! BufNewFile,BufRead *.as setlocal ft=javascript
+" shader files
+au! BufNewFile,BufRead *.shader setlocal ft=c
+" SConscripts with .py extensions
+au! BufNewFile,BufRead SConscript setlocal ft=python
+
+"-------------------
+" show cursor pos
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline cursorcolumn
+
+"-------------------
+" show tabs
+" might need `set encoding=utf-8`
+set list
+set listchars=tab:→\ ,nbsp:|
+
+"-------------------
+" This will look in the current directory for "tags", and work up the 
+" tree towards root until one is found. 
+" IOW, you can be anywhere in your source tree instead of just the 
+" root of it.
+set tags=./tags;/
+
+
