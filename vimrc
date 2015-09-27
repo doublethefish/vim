@@ -1,7 +1,9 @@
+" This next set of lines and weirdess is to make sure pathogen and all plugins
+" work
 call pathogen#runtime_append_all_bundles()
-filetype on
+filetype on                    " read the docs on this one!
 filetype off
-syntax on
+syntax on                      " enable syntax hhighlighting
 filetype plugin indent on
 call pathogen#helptags()
 
