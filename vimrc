@@ -29,6 +29,7 @@ set hlsearch                   " highlight all matches after typing
 set guifont=Andale\ Mono\ 11   " a list of fonts which will be used for the GUI version of Vim
 "set guifont=gohufont-14
 set number                     " precede each line with its line number
+set spell spelllang=en_gb      " enable spell-checking
 
 "-------------------
 " This will look in the current directory for "tags", and work up the 
