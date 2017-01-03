@@ -49,3 +49,6 @@
 [submodule "bundle/python-mode"]
 	path = bundle/python-mode
 	url = git://github.com/klen/python-mode.git
+[submodule "bundle/vim-markdown.git"]
+	path = bundle/vim-markdown.git
+	url = https://github.com/plasticboy/vim-markdown.git

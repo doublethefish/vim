@@ -14,6 +14,7 @@ git submodule add https://github.com/reinh/vim-makegreen bundle/makegreen && \
 git submodule add https://github.com/vim-scripts/TaskList.vim.git bundle/tasklist && \
 git submodule add https://github.com/vim-scripts/The-NERD-tree.git bundle/nerdtree && \
 git submodule add https://github.com/sontek/rope-vim.git bundle/ropevim && \
+git submodule add https://github.com/plasticboy/vim-markdown.git bundle/vim-markdown.git \
 git submodule init && \
 git submodule update && \
 git submodule foreach git submodule init && \
