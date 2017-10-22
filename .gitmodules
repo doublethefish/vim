@@ -15,7 +15,7 @@
 	url = https://github.com/ervandew/supertab.git
 [submodule "bundle/minibufexpl"]
 	path = bundle/minibufexpl
-	url = https://github.com/sontek/minibufexpl.vim.git
+	url = git@github.com:fholgado/minibufexpl.vim.git
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = https://github.com/wincent/Command-T.git
@@ -39,10 +39,10 @@
 	url = https://github.com/alfredodeza/pytest.vim.git
 [submodule "bundle/makegreen"]
 	path = bundle/makegreen
-	url = https://github.com/reinh/vim-makegreen
+	url = git@github.com:reinh/vim-makegreen.git
 [submodule "bundle/tasklist"]
 	path = bundle/tasklist
-	url = https://github.com/vim-scripts/TaskList.vim.git
+	url = git@github.com:vim-scripts/TaskList.vim.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/vim-scripts/The-NERD-tree.git
@@ -55,3 +55,12 @@
 [submodule "bundle/swift.vim"]
 	path = bundle/swift.vim
 	url = https://github.com/keith/swift.vim.git
+[submodule "bundle/ropevim"]
+	path = bundle/ropevim
+	url = git@github.com:python-rope/ropevim.git
+[submodule "bundle/swift_vim"]
+	path = bundle/swift_vim
+	url = git@github.com:keith/swift.vim.git
+[submodule "bundle/vim-signify"]
+	path = bundle/vim-signify
+	url = git@github.com:mhinz/vim-signify.git
