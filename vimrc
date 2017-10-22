@@ -142,5 +142,6 @@ set listchars=tab:→\
 " Py-mode config
 let g:pymode_folding = 0
 let g:pymode_indent = 0
+let g:pymode_python = 'python3'
 """"""""""""""""""""""""""""
 
