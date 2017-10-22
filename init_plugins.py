@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
+import os
 import subprocess
+import shutil
+import sys
+
+# forces the sub dir to be deleted if we've
+# uninstalled the module
+DEL = True
 
 USE_SSH = True
 PLUGIN_MODULES = [
@@ -22,10 +29,10 @@ PLUGIN_MODULES = [
     ]
 
 PYTHON_PLUGINS = [
-    # ('github.com/python-rope/ropevim.git',                'bundle/ropevim'),
-    # ('github.com/mitechie/pyflakes-pathogen.git',         'bundle/pyflakes'),
-    # ('github.com/fs111/pydoc.vim.git',                    'bundle/pydoc'),
-    # ('github.com/vim-scripts/pep8.git',                   'bundle/pep8'),
+    (DEL, 'github.com/python-rope/ropevim.git',           'bundle/ropevim'),
+    (DEL, 'github.com/mitechie/pyflakes-pathogen.git',    'bundle/pyflakes'),
+    (DEL, 'github.com/fs111/pydoc.vim.git',               'bundle/pydoc'),
+    (DEL, 'github.com/vim-scripts/pep8.git',              'bundle/pep8'),
     ('github.com/alfredodeza/pytest.vim.git',             'bundle/py.test'),
     ('github.com/github.com:python-mode/python-mode.git', 'bundle/py.test'),
     ]
@@ -44,7 +51,7 @@ def synchronous_sub_proc_run(cmd_list, error_msg="", cwd=None):
         raise RuntimeError("%s Exit code was %d" % (cmd_list, ret_code))
 
 
-def installModule(MODULE_URL, INSTALL_LOCATION):
+def get_correct_prefix(MODULE_URL, USE_SSH=USE_SSH) :
     if USE_SSH:
         prefix = "git@"
         MODULE_URL = MODULE_URL.replace("github.com/", "github.com:")
@@ -52,14 +59,68 @@ def installModule(MODULE_URL, INSTALL_LOCATION):
         prefix = "https://"
     print(MODULE_URL)
     MODULE_URL = prefix + MODULE_URL
+    return MODULE_URL
+
+
+def installModule(MODULE_URL, INSTALL_LOCATION):
+    MODULE_URL = get_correct_prefix(MODULE_URL)
     cmd = ['git', 'submodule', 'add', MODULE_URL, INSTALL_LOCATION]
     synchronous_sub_proc_run(cmd)
 
 
+def uninstallModule(MODULE_URL, INSTALL_LOCATION):
+    if not os.path.exists(INSTALL_LOCATION):
+        return False
+    print("Uninstalling: '%s' (will require commit)"% INSTALL_LOCATION)
+    ssh = get_correct_prefix(MODULE_URL, USE_SSH=True)
+    https = get_correct_prefix(MODULE_URL, USE_SSH=False)
+    for module_url in (ssh, https) :
+        cmd = ['git', 'submodule', 'deinit', '--force', INSTALL_LOCATION]
+        try:
+            synchronous_sub_proc_run(cmd)
+        except RuntimeError:
+            # may have already been installed
+            pass
+        cmd = ['git', 'rm', 'deinit', INSTALL_LOCATION]
+        try:
+            synchronous_sub_proc_run(cmd)
+        except RuntimeError:
+            # may have already been installed
+            pass
+    INSTALL_LOCATION = os.path.abspath(INSTALL_LOCATION)
+    try:
+        shutil.rmtree(INSTALL_LOCATION)
+    except FileNotFoundError:
+        # assume already uninstalled
+        pass
+    cmd = ['git', 'add', INSTALL_LOCATION]
+    synchronous_sub_proc_run(cmd)
+    assert( not os.path.exists(INSTALL_LOCATION) )
+    return True
+
+
+uninstalled_a_plug_in = False
 for PLUGIN_INFO in PLUGIN_MODULES:
+    install = True
+    if len(PLUGIN_INFO) == 3:
+        assert(PLUGIN_INFO[0] == DEL)
+        PLUGIN_INFO = PLUGIN_INFO[1:]
+        install = False
     URL = PLUGIN_INFO[0]
     INSTALL_LOCATION = PLUGIN_INFO[1]
-    installModule(URL, INSTALL_LOCATION)
+    if install:
+        installModule(URL, INSTALL_LOCATION)
+    else:
+        uninstalled = uninstallModule(URL, INSTALL_LOCATION)
+        uninstalled_a_plug_in = uninstalled_a_plug_in or uninstalled
+
+cmd = ['git', 'add', INSTALL_LOCATION]
+synchronous_sub_proc_run(cmd)
+
+if uninstalled_a_plug_in:
+    print("You need to commit the deletion of the modules before continuing")
+    print("Run this command again once done")
+    sys.exit(0)
 
 post_setup_init_cmds = (
     ['git', 'submodule', 'init'],
