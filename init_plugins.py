@@ -8,21 +8,27 @@ PLUGIN_MODULES = [
     ('github.com/tpope/vim-git.git',              'bundle/git'),
     ('github.com/ervandew/supertab.git',          'bundle/supertab'),
     ('github.com/fholgado/minibufexpl.vim.git',   'bundle/minibufexpl'),
+    # to install Command-T on mac ensure you've got the ruby-dev stuff installed
+    # sudo xcode-select --install
     ('github.com/wincent/Command-T.git',          'bundle/command-t'),
-    ('github.com/mitechie/pyflakes-pathogen.git', 'bundle/pyflakes'),
     ('github.com/mileszs/ack.vim.git',            'bundle/ack'),
     ('github.com/sjl/gundo.vim.git',              'bundle/gundo'),
-    ('github.com/fs111/pydoc.vim.git',            'bundle/pydoc'),
-    ('github.com/vim-scripts/pep8.git',           'bundle/pep8'),
-    ('github.com/alfredodeza/pytest.vim.git',     'bundle/py.test'),
     ('github.com/reinh/vim-makegreen.git',        'bundle/makegreen'),
     ('github.com/vim-scripts/TaskList.vim.git',   'bundle/tasklist'),
     ('github.com/vim-scripts/The-NERD-tree.git',  'bundle/nerdtree'),
-    ('github.com/python-rope/ropevim.git',        'bundle/ropevim'),
     ('github.com/plasticboy/vim-markdown.git',    'bundle/vim-markdown.git'),
     ('github.com/keith/swift.vim.git',            'bundle/swift_vim'),
     ('github.com/mhinz/vim-signify.git',          'bundle/vim-signify'),
     ]
+
+PYTHON_PLUGINS = [
+    ('github.com/python-rope/ropevim.git',        'bundle/ropevim'),
+    ('github.com/mitechie/pyflakes-pathogen.git', 'bundle/pyflakes'),
+    ('github.com/fs111/pydoc.vim.git',            'bundle/pydoc'),
+    ('github.com/vim-scripts/pep8.git',           'bundle/pep8'),
+    ('github.com/alfredodeza/pytest.vim.git',     'bundle/py.test'),
+    ]
+PLUGIN_MODULES.extend(PYTHON_PLUGINS)
 
 
 def synchronous_sub_proc_run(cmd_list, error_msg="", cwd=None):
