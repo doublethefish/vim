@@ -52,7 +52,7 @@ def synchronous_sub_proc_run(cmd_list, error_msg="", cwd=None):
         raise RuntimeError("%s Exit code was %d" % (cmd_list, ret_code))
 
 
-def get_correct_prefix(MODULE_URL, USE_SSH=USE_SSH) :
+def get_correct_prefix(MODULE_URL, USE_SSH=USE_SSH):
     if USE_SSH:
         prefix = "git@"
         MODULE_URL = MODULE_URL.replace("github.com/", "github.com:")
@@ -72,10 +72,10 @@ def installModule(MODULE_URL, INSTALL_LOCATION):
 def uninstallModule(MODULE_URL, INSTALL_LOCATION):
     if not os.path.exists(INSTALL_LOCATION):
         return False
-    print("Uninstalling: '%s' (will require commit)"% INSTALL_LOCATION)
+    print("Uninstalling: '%s' (will require commit)" % INSTALL_LOCATION)
     ssh = get_correct_prefix(MODULE_URL, USE_SSH=True)
     https = get_correct_prefix(MODULE_URL, USE_SSH=False)
-    for module_url in (ssh, https) :
+    for module_url in (ssh, https):
         cmd = ['git', 'submodule', 'deinit', '--force', INSTALL_LOCATION]
         try:
             synchronous_sub_proc_run(cmd)
@@ -96,7 +96,7 @@ def uninstallModule(MODULE_URL, INSTALL_LOCATION):
         pass
     cmd = ['git', 'add', INSTALL_LOCATION]
     synchronous_sub_proc_run(cmd)
-    assert( not os.path.exists(INSTALL_LOCATION) )
+    assert(not os.path.exists(INSTALL_LOCATION))
     return True
 
 
