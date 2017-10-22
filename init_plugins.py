@@ -21,7 +21,8 @@ PLUGIN_MODULES = [
     ('github.com/mileszs/ack.vim.git',            'bundle/ack'),
     ('github.com/sjl/gundo.vim.git',              'bundle/gundo'),
     ('github.com/reinh/vim-makegreen.git',        'bundle/makegreen'),
-    ('github.com/vim-scripts/TaskList.vim.git',   'bundle/tasklist'),
+    # conflicts with command-t
+    (DEL, 'github.com/vim-scripts/TaskList.vim.git',   'bundle/tasklist'),
     ('github.com/vim-scripts/The-NERD-tree.git',  'bundle/nerdtree'),
     ('github.com/plasticboy/vim-markdown.git',    'bundle/vim-markdown.git'),
     ('github.com/keith/swift.vim.git',            'bundle/swift_vim'),
