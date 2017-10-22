@@ -7,7 +7,7 @@ PLUGIN_MODULES = [
         ('github.com/tpope/vim-surround.git',               'bundle/surround'),
         ('github.com/tpope/vim-git.git',                    'bundle/git'),
         ('github.com/ervandew/supertab.git',                'bundle/supertab'),
-        ('github.com/sontek/minibufexpl.vim.git',           'bundle/minibufexpl'),
+        ('github.com/fholgado/minibufexpl.vim.git',         'bundle/minibufexpl'),
         ('github.com/wincent/Command-T.git',                'bundle/command-t'),
         ('github.com/mitechie/pyflakes-pathogen.git',       'bundle/pyflakes'),
         ('github.com/mileszs/ack.vim.git',                  'bundle/ack'),
@@ -15,12 +15,12 @@ PLUGIN_MODULES = [
         ('github.com/fs111/pydoc.vim.git',                  'bundle/pydoc'),
         ('github.com/vim-scripts/pep8.git',                 'bundle/pep8'),
         ('github.com/alfredodeza/pytest.vim.git',           'bundle/py.test'),
-        ('github.com/reinh/vim-makegreen bundle/makegreen', 'bundle/makegreen'),
+        ('github.com/reinh/vim-makegreen.git',              'bundle/makegreen'),
         ('github.com/vim-scripts/TaskList.vim.git',         'bundle/tasklist'),
         ('github.com/vim-scripts/The-NERD-tree.git',        'bundle/nerdtree'),
-        ('github.com/sontek/rope-vim.git',                  'bundle/ropevim'),
+        ('github.com/python-rope/ropevim.git',              'bundle/ropevim'),
         ('github.com/plasticboy/vim-markdown.git',          'bundle/vim-markdown.git'),
-        ('github.com/keith/swift.vim.git',                  'bundle/swift_vim')
+        ('github.com/keith/swift.vim.git',                  'bundle/swift_vim'),
         ]
 
 
