@@ -22,11 +22,12 @@ PLUGIN_MODULES = [
     ]
 
 PYTHON_PLUGINS = [
-    ('github.com/python-rope/ropevim.git',        'bundle/ropevim'),
-    ('github.com/mitechie/pyflakes-pathogen.git', 'bundle/pyflakes'),
-    ('github.com/fs111/pydoc.vim.git',            'bundle/pydoc'),
-    ('github.com/vim-scripts/pep8.git',           'bundle/pep8'),
-    ('github.com/alfredodeza/pytest.vim.git',     'bundle/py.test'),
+    # ('github.com/python-rope/ropevim.git',                'bundle/ropevim'),
+    # ('github.com/mitechie/pyflakes-pathogen.git',         'bundle/pyflakes'),
+    # ('github.com/fs111/pydoc.vim.git',                    'bundle/pydoc'),
+    # ('github.com/vim-scripts/pep8.git',                   'bundle/pep8'),
+    ('github.com/alfredodeza/pytest.vim.git',             'bundle/py.test'),
+    ('github.com/github.com:python-mode/python-mode.git', 'bundle/py.test'),
     ]
 PLUGIN_MODULES.extend(PYTHON_PLUGINS)
 
