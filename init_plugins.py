@@ -21,6 +21,7 @@ PLUGIN_MODULES = [
         ('github.com/python-rope/ropevim.git',              'bundle/ropevim'),
         ('github.com/plasticboy/vim-markdown.git',          'bundle/vim-markdown.git'),
         ('github.com/keith/swift.vim.git',                  'bundle/swift_vim'),
+        ('github.com/mhinz/vim-signify.git',                'bundle/vim-signify'),
         ]
 
 
