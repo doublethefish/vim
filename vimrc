@@ -145,3 +145,8 @@ let g:pymode_indent = 0
 let g:pymode_python = 'python3'
 """"""""""""""""""""""""""""
 
+""""""""""""""""""""""
+" signify - git-gutter replacement config
+" get more frequent updates
+let g:signify_realtime=1
+""""""""""""""""""""""""""""
