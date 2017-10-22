@@ -52,3 +52,6 @@
 [submodule "bundle/vim-markdown.git"]
 	path = bundle/vim-markdown.git
 	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "bundle/swift.vim"]
+	path = bundle/swift.vim
+	url = https://github.com/keith/swift.vim.git
