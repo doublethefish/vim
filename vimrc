@@ -26,7 +26,7 @@ set backspace=indent,eol,start " allow backspace to work over elements named
 set novisualbell               " Don't use visual bell - stop the flashing
 set incsearch                  " show matches as you type
 set hlsearch                   " highlight all matches after typing
-set guifont=Andale\ Mono\ 11   " a list of fonts which will be used for the GUI version of Vim
+set guifont=Andale\ Mono\ 12   " a list of fonts which will be used for the GUI version of Vim
 "set guifont=gohufont-14
 set number                     " precede each line with its line number
 set spell spelllang=en_gb      " enable spell-checking
