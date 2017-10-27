@@ -23,7 +23,7 @@ set autoindent                 " Copy indent from current line when starting a n
 set guioptions+=a              " highlighting text copies that text to the clip board
 set wildmenu                   " possible matches are shown just above the command line
 set backspace=indent,eol,start " allow backspace to work over elements named
-set visualbell                 " Use visual bell instead of beeping
+set novisualbell               " Don't use visual bell - stop the flashing
 set incsearch                  " show matches as you type
 set hlsearch                   " highlight all matches after typing
 set guifont=Andale\ Mono\ 11   " a list of fonts which will be used for the GUI version of Vim
