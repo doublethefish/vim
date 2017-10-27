@@ -10,23 +10,36 @@ DEL = True
 
 USE_SSH = True
 PLUGIN_MODULES = [
-    ('github.com/msanders/snipmate.vim.git',      'bundle/snipmate'),
-    ('github.com/tpope/vim-surround.git',         'bundle/surround'),
-    ('github.com/tpope/vim-git.git',              'bundle/git'),
-    ('github.com/ervandew/supertab.git',          'bundle/supertab'),
+    ('github.com/msanders/snipmate.vim.git',      'bundle/snipmate.git'),
+    (DEL, 'github.com/msanders/snipmate.vim.git',      'bundle/snipmate'),
+    ('github.com/tpope/vim-surround.git',         'bundle/surround.git'),
+    (DEL, 'github.com/tpope/vim-surround.git',         'bundle/surround'),
+    ('github.com/tpope/vim-git.git',              'bundle/git.git'),
+    (DEL, 'github.com/tpope/vim-git.git',              'bundle/git'),
+    ('github.com/ervandew/supertab.git',          'bundle/supertab.git'),
+    (DEL, 'github.com/ervandew/supertab.git',          'bundle/supertab'),
     ('github.com/fholgado/minibufexpl.vim.git',   'bundle/minibufexpl'),
+    (DEL, 'github.com/fholgado/minibufexpl.vim.git',   'bundle/minibufexpl'),
     # to install Command-T on mac ensure you've got the ruby-dev stuff installed
     # sudo xcode-select --install
-    ('github.com/wincent/Command-T.git',          'bundle/command-t'),
-    ('github.com/mileszs/ack.vim.git',            'bundle/ack'),
-    ('github.com/sjl/gundo.vim.git',              'bundle/gundo'),
-    ('github.com/reinh/vim-makegreen.git',        'bundle/makegreen'),
+    ('github.com/wincent/Command-T.git',          'bundle/command-t.git'),
+    (DEL, 'github.com/wincent/Command-T.git',     'bundle/command-t'),
+    ('github.com/mileszs/ack.vim.git',            'bundle/ack.git'),
+    (DEL, 'github.com/mileszs/ack.vim.git',       'bundle/ack'),
+    ('github.com/sjl/gundo.vim.git',              'bundle/gundo.git'),
+    (DEL, 'github.com/sjl/gundo.vim.git',         'bundle/gundo'),
+    ('github.com/reinh/vim-makegreen.git',        'bundle/makegreen.git'),
+    (DEL, 'github.com/reinh/vim-makegreen.git',   'bundle/makegreen'),
     # conflicts with command-t
     (DEL, 'github.com/vim-scripts/TaskList.vim.git',   'bundle/tasklist'),
-    ('github.com/vim-scripts/The-NERD-tree.git',  'bundle/nerdtree'),
+    ('github.com/vim-scripts/The-NERD-tree.git',  'bundle/nerdtree.git'),
+    (DEL, 'github.com/vim-scripts/The-NERD-tree.git',  'bundle/nerdtree'),
     ('github.com/plasticboy/vim-markdown.git',    'bundle/vim-markdown.git'),
-    ('github.com/keith/swift.vim.git',            'bundle/swift_vim'),
-    ('github.com/mhinz/vim-signify.git',          'bundle/vim-signify'),
+    ('github.com/keith/swift.vim.git',            'bundle/swift_vim.git'),
+    (DEL, 'github.com/keith/swift.vim.git',       'bundle/swift_vim'),
+    (DEL, 'github.com/keith/swift.vim.git',       'bundle/swift.vim'),
+    ('github.com/mhinz/vim-signify.git',          'bundle/vim-signify.git'),
+    (DEL, 'github.com/mhinz/vim-signify.git',     'bundle/vim-signify'),
     ]
 
 PYTHON_PLUGINS = [
