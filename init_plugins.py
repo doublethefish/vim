@@ -95,7 +95,10 @@ def uninstallModule(MODULE_URL, INSTALL_LOCATION):
         # assume already uninstalled
         pass
     cmd = ['git', 'add', INSTALL_LOCATION]
-    synchronous_sub_proc_run(cmd)
+    try:
+        synchronous_sub_proc_run(cmd)
+    except RuntimeError:
+        pass
     assert(not os.path.exists(INSTALL_LOCATION))
     return True
 
