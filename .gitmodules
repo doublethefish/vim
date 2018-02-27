@@ -51,7 +51,7 @@
 	url = git://github.com/klen/python-mode.git
 [submodule "bundle/vim-markdown.git"]
 	path = bundle/vim-markdown.git
-	url = https://github.com/plasticboy/vim-markdown.git
+	url = git@github.com:plasticboy/vim-markdown.git
 [submodule "bundle/swift.vim"]
 	path = bundle/swift.vim
 	url = https://github.com/keith/swift.vim.git
@@ -64,3 +64,45 @@
 [submodule "bundle/vim-signify"]
 	path = bundle/vim-signify
 	url = git@github.com:mhinz/vim-signify.git
+[submodule "bundle/snipmate.git"]
+	path = bundle/snipmate.git
+	url = git@github.com:msanders/snipmate.vim.git
+[submodule "bundle/surround.git"]
+	path = bundle/surround.git
+	url = git@github.com:tpope/vim-surround.git
+[submodule "bundle/git.git"]
+	path = bundle/git.git
+	url = git@github.com:tpope/vim-git.git
+[submodule "bundle/minibufexpl.git"]
+	path = bundle/minibufexpl.git
+	url = git@github.com:fholgado/minibufexpl.vim.git
+[submodule "bundle/command-t.git"]
+	path = bundle/command-t.git
+	url = git@github.com:wincent/Command-T.git
+[submodule "bundle/ack.git"]
+	path = bundle/ack.git
+	url = git@github.com:mileszs/ack.vim.git
+[submodule "bundle/gundo.git"]
+	path = bundle/gundo.git
+	url = git@github.com:sjl/gundo.vim.git
+[submodule "bundle/makegreen.git"]
+	path = bundle/makegreen.git
+	url = git@github.com:reinh/vim-makegreen.git
+[submodule "bundle/nerdtree.git"]
+	path = bundle/nerdtree.git
+	url = git@github.com:vim-scripts/The-NERD-tree.git
+[submodule "bundle/swift_vim.git"]
+	path = bundle/swift_vim.git
+	url = git@github.com:keith/swift.vim.git
+[submodule "bundle/vim-signify.git"]
+	path = bundle/vim-signify.git
+	url = git@github.com:mhinz/vim-signify.git
+[submodule "bundle/qmake-syntax-vim.git"]
+	path = bundle/qmake-syntax-vim.git
+	url = git@github.com:artoj/qmake-syntax-vim.git
+[submodule "bundle/py.test.git"]
+	path = bundle/py.test.git
+	url = git@github.com:alfredodeza/pytest.vim.git
+[submodule "bundle/python-mode.git"]
+	path = bundle/python-mode.git
+	url = git@github.com:python-mode/python-mode.git
