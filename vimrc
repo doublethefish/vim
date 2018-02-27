@@ -29,7 +29,7 @@ set hlsearch                   " highlight all matches after typing
 set guifont=Andale\ Mono\ 12   " a list of fonts which will be used for the GUI version of Vim
 "set guifont=gohufont-14
 set number                     " precede each line with its line number
-set spell spelllang=en_gb      " enable spell-checking
+"set spell spelllang=en_gb      " enable spell-checking
 
 "-------------------
 " This will look in the current directory for "tags", and work up the 
@@ -132,6 +132,8 @@ au! BufNewFile,BufRead *.as setlocal ft=javascript
 au! BufNewFile,BufRead *.shader setlocal ft=c
 " SConscripts with .py extensions
 au! BufNewFile,BufRead SConscript setlocal ft=python
+" QMake files with .ppro extensions
+"au! BufNewFile,BufRead *.pro setlocal ft=cmake
 
 """"""""""""""""""""""""""""
 " show tabs
