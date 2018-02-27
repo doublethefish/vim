@@ -63,7 +63,7 @@ def synchronous_sub_proc_run(cmd_list, error_msg="", cwd=None):
             return
         print(proc_run_info.stdout)
         print(proc_run_info.stderr)
-        raise RuntimeError("%s Exit code was %d" % (cmd_list, ret_code))
+        raise RuntimeError("%s Exit code was %d" % (" ".join(cmd_list), ret_code))
 
 
 def get_correct_prefix(MODULE_URL, USE_SSH=USE_SSH):
