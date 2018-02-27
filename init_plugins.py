@@ -49,7 +49,7 @@ PYTHON_PLUGINS = [
     (DEL, 'github.com/fs111/pydoc.vim.git',               'bundle/pydoc'),
     (DEL, 'github.com/vim-scripts/pep8.git',              'bundle/pep8'),
     ('github.com/alfredodeza/pytest.vim.git',             'bundle/py.test.git'),
-    ('github.com/github.com:python-mode/python-mode.git', 'bundle/python-mode.git'),
+    ('github.com:python-mode/python-mode.git', 'bundle/python-mode.git'),
     ]
 PLUGIN_MODULES.extend(PYTHON_PLUGINS)
 
