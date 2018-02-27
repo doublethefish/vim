@@ -18,7 +18,7 @@ PLUGIN_MODULES = [
     (DEL, 'github.com/tpope/vim-git.git',              'bundle/git'),
     (DEL, 'github.com/ervandew/supertab.git',          'bundle/supertab.git'), # pile of crap
     (DEL, 'github.com/ervandew/supertab.git',          'bundle/supertab'),
-    ('github.com/fholgado/minibufexpl.vim.git',   'bundle/minibufexpl'),
+    ('github.com/fholgado/minibufexpl.vim.git',   'bundle/minibufexpl.git'),
     (DEL, 'github.com/fholgado/minibufexpl.vim.git',   'bundle/minibufexpl'),
     # to install Command-T on mac ensure you've got the ruby-dev stuff installed
     # sudo xcode-select --install
@@ -48,8 +48,8 @@ PYTHON_PLUGINS = [
     (DEL, 'github.com/mitechie/pyflakes-pathogen.git',    'bundle/pyflakes'),
     (DEL, 'github.com/fs111/pydoc.vim.git',               'bundle/pydoc'),
     (DEL, 'github.com/vim-scripts/pep8.git',              'bundle/pep8'),
-    ('github.com/alfredodeza/pytest.vim.git',             'bundle/py.test'),
-    ('github.com/github.com:python-mode/python-mode.git', 'bundle/py.test'),
+    ('github.com/alfredodeza/pytest.vim.git',             'bundle/py.test.git'),
+    ('github.com/github.com:python-mode/python-mode.git', 'bundle/python-mode.git'),
     ]
 PLUGIN_MODULES.extend(PYTHON_PLUGINS)
 
