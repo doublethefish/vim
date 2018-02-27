@@ -78,7 +78,7 @@ def get_correct_prefix(MODULE_URL, USE_SSH=USE_SSH):
 
 def installModule(MODULE_URL, INSTALL_LOCATION):
     MODULE_URL = get_correct_prefix(MODULE_URL)
-    cmd = ['git', 'submodule', 'add', MODULE_URL, INSTALL_LOCATION]
+    cmd = ['git', 'submodule', 'add', '--force', MODULE_URL, INSTALL_LOCATION]
     synchronous_sub_proc_run(cmd)
 
 
