@@ -40,6 +40,7 @@ PLUGIN_MODULES = [
     (DEL, 'github.com/keith/swift.vim.git',       'bundle/swift.vim'),
     ('github.com/mhinz/vim-signify.git',          'bundle/vim-signify.git'),
     (DEL, 'github.com/mhinz/vim-signify.git',     'bundle/vim-signify'),
+    ('git@github.com:artoj/qmake-syntax-vim.git', 'bundle/qmake-syntax-vim.git'),
     ]
 
 PYTHON_PLUGINS = [
