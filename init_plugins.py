@@ -10,6 +10,7 @@ DEL = True
 
 USE_SSH = True
 PLUGIN_MODULES = [
+    ('github.com/w0rp/ale.git',                   'bundle/ale.git'),
     ('github.com/msanders/snipmate.vim.git',      'bundle/snipmate.git'),
     (DEL, 'github.com/msanders/snipmate.vim.git',      'bundle/snipmate'),
     ('github.com/tpope/vim-surround.git',         'bundle/surround.git'),
@@ -18,7 +19,7 @@ PLUGIN_MODULES = [
     (DEL, 'github.com/tpope/vim-git.git',              'bundle/git'),
     (DEL, 'github.com/ervandew/supertab.git',          'bundle/supertab.git'), # pile of crap
     (DEL, 'github.com/ervandew/supertab.git',          'bundle/supertab'),
-    ('github.com/fholgado/minibufexpl.vim.git',   'bundle/minibufexpl.git'),
+    (DEL, 'github.com/fholgado/minibufexpl.vim.git',   'bundle/minibufexpl.git'),
     (DEL, 'github.com/fholgado/minibufexpl.vim.git',   'bundle/minibufexpl'),
     # to install Command-T on mac ensure you've got the ruby-dev stuff installed
     # sudo xcode-select --install
