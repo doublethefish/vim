@@ -143,7 +143,7 @@ if uninstalled_a_plug_in:
 
 post_setup_init_cmds = (
     ['git', 'submodule', 'init'],
-    ['git', 'submodule', 'update'],
+    ['git', 'submodule', 'update', '--init', '--recursive'],
     ['git', 'submodule', 'foreach', 'git', 'submodule', 'init'],
     ['git', 'submodule', 'foreach', 'git', 'submodule', 'update'],
 )
