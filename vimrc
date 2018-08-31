@@ -30,6 +30,7 @@ set guifont=Andale\ Mono\ 12   " a list of fonts which will be used for the GUI 
 "set guifont=gohufont-14
 set number                     " precede each line with its line number
 "set spell spelllang=en_gb      " enable spell-checking
+set tabpagemax=25              " Set the maximum number of tabs concurrently opened (default is 10)
 
 "-------------------
 " This will look in the current directory for "tags", and work up the 
