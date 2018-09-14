@@ -32,6 +32,12 @@ set number                     " precede each line with its line number
 "set spell spelllang=en_gb      " enable spell-checking
 set tabpagemax=25              " Set the maximum number of tabs concurrently opened (default is 10)
 
+" Disable the bell in vim
+set noerrorbells
+set novisualbell
+set t_vb=
+autocmd! GUIEnter * set vb t_vb=
+
 "-------------------
 " This will look in the current directory for "tags", and work up the 
 " tree towards root until one is found. 
