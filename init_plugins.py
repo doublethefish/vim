@@ -22,24 +22,85 @@ os.makedirs(bundle_path, exist_ok=True)
 
 USE_SSH = True
 PLUGIN_MODULES = [
-    ("github.com/w0rp/ale.git", "bundle/ale.git"),
-    ("github.com/garbas/snipmate.vim.git", "bundle/snipmate.git"),
-    ("github.com/tpope/vim-surround.git", "bundle/surround.git"),
+    (
+        "github.com/w0rp/ale.git",
+        "bundle/ale.git",
+        "Asynchronous Lint Engine",
+        ":help ale_python",
+    ),
+    (
+        "github.com/garbas/snipmate.vim.git",
+        "bundle/snipmate.git",
+        "Extra snippet on <tab>",
+        ":help snipMate",
+    ),
+    (
+        "github.com/tpope/vim-surround.git",
+        "bundle/surround.git",
+        "Change surrounding chars",
+        "cs'<p>, :help surround",
+    ),
     ("github.com/tpope/vim-fugitive", "bundle/fuGITive.git", "Git wrapper", "help: G"),
-    ("github.com/mileszs/ack.vim.git", "bundle/ack.git"),
-    ("github.com/sjl/gundo.vim.git", "bundle/gundo.git"),
-    ("github.com/reinh/vim-makegreen.git", "bundle/makegreen.git"),
+    (
+        "github.com/mileszs/ack.vim.git",
+        "bundle/ack.git",
+        "Ack search tool",
+        r":Ack [options] {pattern} [{directories}], :h Ack",
+    ),
+    ("github.com/sjl/gundo.vim.git", "bundle/gundo.git", "Visualize Undo Tree", "????"),
+    (
+        "github.com/reinh/vim-makegreen.git",
+        "bundle/makegreen.git",
+        "Show test-run status",
+        ":MakeGreen %",
+    ),
     # conflicts with command-t
-    ("github.com/vim-scripts/The-NERD-tree.git", "bundle/nerdtree.git"),
-    ("github.com/plasticboy/vim-markdown.git", "bundle/vim-markdown.git"),
-    ("github.com/keith/swift.vim.git", "bundle/swift_vim.git"),
-    ("github.com/mhinz/vim-signify.git", "bundle/vim-signify.git"),
-    ("github.com:artoj/qmake-syntax-vim.git", "bundle/qmake-syntax-vim.git"),
+    # ('github.com/vim-scripts/The-NERD-tree.git',  'bundle/nerdtree.git'),
+    (
+        "github.com/plasticboy/vim-markdown.git",
+        "bundle/vim-markdown.git",
+        "Highlighting for .md",
+        ":h vim-markdown",
+    ),
+    (
+        "github.com/keith/swift.vim.git",
+        "bundle/swift_vim.git",
+        "Syntax and indent files for Swift",
+        "no help",
+    ),
+    (
+        "github.com/mhinz/vim-signify.git",
+        "bundle/vim-signify.git",
+        "Shows diff in the gutter",
+        ":h signify",
+    ),
+    (
+        "github.com/artoj/qmake-syntax-vim.git",
+        "bundle/qmake-syntax-vim.git",
+        "Syntax etc for qmake files",
+        "no help",
+    ),
+    (
+        "github.com/tpope/vim-abolish.git",
+        "bundle/abolish.git",
+        "Subvert, coercion (crs, cru), Abbreviation",
+        "h: crs, h:abbrviations, :Subvert, really nice",
+    ),
 ]
 
 PYTHON_PLUGINS = [
-    ("github.com/alfredodeza/pytest.vim.git", "bundle/py.test.git"),
-    ("github.com:python-mode/python-mode.git", "bundle/python-mode.git"),
+    (
+        "github.com/alfredodeza/pytest.vim.git",
+        "bundle/py.test.git",
+        "Py.test wrapper",
+        ":h test",
+    ),
+    (
+        "github.com/python-mode/python-mode.git",
+        "bundle/python-mode.git",
+        "",
+        ":help pymode, '<C-c>rm',  '<leader>r' -> runs the current python script, '<leader>b' adds a breakpoints",
+    ),
 ]
 PLUGIN_MODULES.extend(PYTHON_PLUGINS)
 
