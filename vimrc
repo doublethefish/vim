@@ -151,6 +151,7 @@ set listchars=tab:→\
 " Py-mode config
 let g:pymode_folding = 0
 let g:pymode_indent = 0
+let g:pymode_rope = 1
 let g:pymode_python = 'python3'
 let g:ale_python_flake8_executable = 'python3'
 """"""""""""""""""""""""""""
