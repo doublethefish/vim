@@ -26,9 +26,6 @@ PLUGIN_MODULES = [
     ("github.com/garbas/snipmate.vim.git", "bundle/snipmate.git"),
     ("github.com/tpope/vim-surround.git", "bundle/surround.git"),
     ("github.com/tpope/vim-fugitive", "bundle/fuGITive.git", "Git wrapper", "help: G"),
-    # to install Command-T on mac ensure you've got the ruby-dev stuff installed
-    # sudo xcode-select --install
-    ("github.com/wincent/Command-T.git", "bundle/command-t.git"),
     ("github.com/mileszs/ack.vim.git", "bundle/ack.git"),
     ("github.com/sjl/gundo.vim.git", "bundle/gundo.git"),
     ("github.com/reinh/vim-makegreen.git", "bundle/makegreen.git"),
