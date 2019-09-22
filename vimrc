@@ -160,3 +160,6 @@ let g:ale_python_flake8_executable = 'python3'
 " get more frequent updates
 let g:signify_realtime=1
 """"""""""""""""""""""""""""
+
+" Disable folding in vim-markdown
+let g:vim_markdown_folding_disabled = 1
