@@ -1,12 +1,24 @@
 #!/usr/bin/env python3
+import datetime
 import os
 import subprocess
 import shutil
-import sys
 
-# forces the sub dir to be deleted if we've
-# uninstalled the module
-DEL = True
+
+def backup_plugins_dir(bundle_path):
+    time_stamp = str(datetime.datetime.utcnow())
+    time_stamp = time_stamp.translate(str.maketrans(" -:.", "_" * 4))
+    try:
+        shutil.move(bundle_path, "%s-%s-bak" % (bundle_path, time_stamp))
+    except FileNotFoundError:
+        pass
+
+
+bundle_path = os.path.abspath("%s/.vim/bundle" % os.environ.get("HOME", "."))
+backup_plugins_dir(bundle_path)
+
+# Make the install dir for plgins
+os.makedirs(bundle_path, exist_ok=True)
 
 USE_SSH = True
 PLUGIN_MODULES = [
