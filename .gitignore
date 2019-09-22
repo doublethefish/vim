@@ -1,0 +1,4 @@
+bundle-*
+.ropeproject
+*.swp
+*.orig
