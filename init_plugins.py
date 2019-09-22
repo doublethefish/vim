@@ -138,6 +138,8 @@ def installModule(MODULE_URL, INSTALL_LOCATION):
 for PLUGIN_INFO in PLUGIN_MODULES:
     URL = PLUGIN_INFO[0]
     INSTALL_LOCATION = PLUGIN_INFO[1]
+    summary = PLUGIN_INFO[2]
+    print(summary)
     installModule(URL, INSTALL_LOCATION)
 
 cmd = ["git", "add", INSTALL_LOCATION]
