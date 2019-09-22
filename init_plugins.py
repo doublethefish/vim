@@ -23,7 +23,7 @@ os.makedirs(bundle_path, exist_ok=True)
 USE_SSH = True
 PLUGIN_MODULES = [
     ("github.com/w0rp/ale.git", "bundle/ale.git"),
-    ("github.com/msanders/snipmate.vim.git", "bundle/snipmate.git"),
+    ("github.com/garbas/snipmate.vim.git", "bundle/snipmate.git"),
     ("github.com/tpope/vim-surround.git", "bundle/surround.git"),
     ("github.com/tpope/vim-git.git", "bundle/git.git"),
     # to install Command-T on mac ensure you've got the ruby-dev stuff installed
