@@ -57,7 +57,7 @@
 	url = git@github.com:mhinz/vim-signify.git
 [submodule "bundle/snipmate.git"]
 	path = bundle/snipmate.git
-	url = git@github.com:msanders/snipmate.vim.git
+	url = git@github.com:garbas/snipmate.vim.git
 [submodule "bundle/surround.git"]
 	path = bundle/surround.git
 	url = git@github.com:tpope/vim-surround.git
@@ -100,3 +100,9 @@
 [submodule "bundle/ale.git"]
 	path = bundle/ale.git
 	url = git@github.com:w0rp/ale.git
+[submodule "bundle/abolish.git"]
+	path = bundle/abolish.git
+	url = git@github.com:tpope/vim-abolish.git
+[submodule "bundle/fuGITive.git"]
+	path = bundle/fuGITive.git
+	url = git@github.com:tpope/vim-fugitive
