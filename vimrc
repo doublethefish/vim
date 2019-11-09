@@ -156,6 +156,7 @@ let g:pymode_python = 'python3'
 let g:ale_python_flake8_executable = 'python3'
 let g:pymode_options_max_line_length=88
 let g:syntastic_python_pylint_post_args="--max-line-length=88"
+" TODO: let g:pymode_lint_config = '$HOME/.pylint.rc'
 """"""""""""""""""""""""""""
 
 """"""""""""""""""""""
