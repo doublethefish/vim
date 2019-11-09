@@ -106,3 +106,6 @@
 [submodule "bundle/fuGITive.git"]
 	path = bundle/fuGITive.git
 	url = git@github.com:tpope/vim-fugitive
+[submodule "bundle/vimoutliner.git"]
+	path = bundle/vimoutliner.git
+	url = git@github.com:vimoutliner/vimoutliner.git

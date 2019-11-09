@@ -86,6 +86,12 @@ PLUGIN_MODULES = [
         "Subvert, coercion (crs, cru), Abbreviation",
         "h: crs, h:abbrviations, :Subvert, really nice",
     ),
+    (
+        "github.com/vimoutliner/vimoutliner.git",
+        "bundle/vimoutliner.git",
+        "Quick note taking and outlineing of tasks/information",
+        "h: vo, use ',,', <leader>cb, <leader>cp, <leader>s, <leader>S",
+    ),
 ]
 
 PYTHON_PLUGINS = [
