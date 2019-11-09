@@ -154,6 +154,8 @@ let g:pymode_indent = 0
 let g:pymode_rope = 1
 let g:pymode_python = 'python3'
 let g:ale_python_flake8_executable = 'python3'
+let g:pymode_options_max_line_length=88
+let g:syntastic_python_pylint_post_args="--max-line-length=88"
 """"""""""""""""""""""""""""
 
 """"""""""""""""""""""
@@ -164,3 +166,10 @@ let g:signify_realtime=1
 
 " Disable folding in vim-markdown
 let g:vim_markdown_folding_disabled = 1
+
+" Set the at col 88
+if exists('+colorcolumn')
+  set colorcolumn=88
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>88v.\+', -1)
+endif
