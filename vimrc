@@ -174,3 +174,8 @@ if exists('+colorcolumn')
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>88v.\+', -1)
 endif
+
+
+" To see ALE issues in the quickfix window do `:copen`
+let g:ale_list_window_size = 5
+let g:ale_set_quickfix = 1
